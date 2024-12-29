@@ -1,0 +1,264 @@
+:root {
+    --primary-color: #4F46E5;
+    --secondary-color: #818CF8;
+    --text-color: #1F2937;
+    --background-color: #F9FAFB;
+    --card-background: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--card-background);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.buy-button {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content */
+main {
+    margin-top: 74px;
+}
+
+section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.primary-button, .secondary-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.primary-button {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.primary-button:hover, .secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Tokenomics Section */
+.tokenomics-content {
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.tokenomics-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Buy Section */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-background);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-grid, .tokenomics-info, .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
